@@ -1,0 +1,14 @@
+<div class="header">
+  <button *ngIf="showButton" (click)="stopPropagation($event); toggleSearch();">Search</button>
+  <div #inputContainer class="input-container" [class.expand]="!showButton">
+    <input type="text" placeholder="Search..." (focus)="onFocus()">
+    <button class="find-btn">Find</button>
+  </div>
+  <div #popupContainer class="categories-popup" *ngIf="showPopup">
+    <p>Category 1</p>
+    <p>Category 2</p>
+    <p>Category 3</p>
+  </div>
+</div>
+
+<router-outlet />
