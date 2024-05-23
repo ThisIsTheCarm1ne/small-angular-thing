@@ -1,0 +1,44 @@
+.header {
+  width: 100vw;
+  height: 5vh;
+  background-color: darkcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-container {
+  width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  border: 0;
+  transition: all 0.5s;
+}
+.input-container.expand {
+  opacity: 1;
+  width: 50vw;
+}
+input {
+  width: 80%;
+}
+.categories-popup {
+  position: absolute;
+  top: 5%;
+  width: 30vw;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+.input-container {
+  position: relative;
+}
+.expand.categories-popup {
+  display: block;
+}
+.find-btn {
+  border: 0;
+  height: 100%;
+  background-color: orange;
+}
